@@ -36,15 +36,15 @@ The decription of the activities are present in the activity_labels files
 5: Assign names from the step 3
 6: Read y_test which is nothing but activity codes into a table
 7: Read activities into the tables
-8: Join the activity codes to activity labeles to get meaning full names for the activities
-9: Read the subject_test into a table.
-10: Combined the tables in step5, 8 and 9 to get a complete test data set with activity labes and column names
-11: Repeat the steps 4 thur 10 for Training dataset
-12: Append the data in steps 10 and 11 to create a master data set of training and test observations combined
-13: Next find the indices of the columns that contain the mean and std deviation
-14: Use those indiced to retain the columns in the master data set of further intrest including the subject, activity code and activity labels
-15  Use the subset in step 14 and group on subject, activity code, activity lables and calculate mean of every other column to create a final data set.
-
+8: Read the subject_test into a table.
+9: Combined the tables in step5, 6 and 8 to get a complete test data set with activity labes and column names
+10: Repeat the steps 4 thur 9 for Training dataset
+11: Append the data in steps 10 and 11 to create a master data set of training and test observations combined
+12: Next find the indices of the columns that contain the mean and std deviation
+13: Use those indiced to retain the columns in the master data set of further intrest including the subject, activity code and activity labels
+14: Use the subset in step 14 and group on subject, activity code, and calculate mean of every other column to create a final data set.
+15: Join the activity codes to activity labeles to get meaning full names for the activities
+16: Subset and reorder to keep necessary columns.
 
 ###Cleaning of the data
 Please refer ReadMe on the repo describes the over all requirement for cleaning the data.
