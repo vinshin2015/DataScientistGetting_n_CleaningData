@@ -32,9 +32,6 @@ names(x_train)<-rownames[2,]
 #Activities
 y_train<-read.table("./train/y_train.txt")
 names(y_train)<-("ActivityCd")
-#Join/Merge with Activity description/label.
-#y_train_activity<-merge(y_train,activity,by.x = "V1", by.y = "V1", all.x = TRUE)
-#names(y_train_activity)<-c("ActivityCd","ActivityLabel")
 #Subjects
 sub_train<-read.table("./train/subject_train.txt")
 names(sub_train)<-c("Subject")
@@ -45,7 +42,7 @@ CompleteTrainingDataset<-cbind(sub_train,y_train,x_train)
 
 #Trainign and Test combined
 MergedTrainingTest<-rbind(CompleteTrainingDataset,CompleteTestDataset)
-#MergedTrainingTest<-merge(MergedTrainingTest1,activity,by.x = "ActivityCd", by.y = "ActivityCd", all.x = TRUE)
+
 library(dplyr)
 #subsetting the data set for mean and std values
 TmpNames<-names(MergedTrainingTest)
