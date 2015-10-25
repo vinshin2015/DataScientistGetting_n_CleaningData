@@ -58,4 +58,6 @@ SubMergedTrainingTest<-MergedTrainingTest[,ColToRetain]
 #Calculating Mean
 FinalAverages<-SubMergedTrainingTest %>% group_by(Subject,ActivityCd,ActivityLabel) %>% summarize_each(funs(mean))
 
+# Write file
+write.table(FinalAverages, file = "FinalAverages.txt", row.names = FALSE)
 
